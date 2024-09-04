@@ -1,7 +1,4 @@
-Certainly! Here's a draft for your `README.md` file for the weather app project:
-
 ---
-
 # Weather App
 
 This Weather App is a simple yet powerful application that allows users to get real-time weather information for any location in the world. Built using the OpenWeatherMap API, it provides current weather conditions, including temperature, humidity, and weather descriptions, with a user-friendly interface.

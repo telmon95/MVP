@@ -1,59 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    background-color: #00000021;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #00000021; /* Light transparent black background */
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+/* Weather Container Styling */
 .weather-container {
-    background: rgba(153, 28, 28, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  background: rgba(153, 28, 28, 0.2); /* Semi-transparent maroon background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
 
-  .city {
-    font-size: 2em;
-    font-weight: 700;
-    color: #555;
-  }
+/* City Name Styling */
+.city {
+  font-size: 2em;
+  font-weight: 700;
+  color: #555; /* Dark grey text */
+}
 
-  .temperature {
-    font-size: 4em;
-    font-weight: 300;
-    color: #222;
-  }
+/* Temperature Styling */
+.temperature {
+  font-size: 4em;
+  font-weight: 300;
+  color: #222; /* Darker grey for temperature */
+}
 
-  .description {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #555;
-  }
+/* Weather Description Styling */
+.description {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #555; /* Matching grey for description */
+}
 
-  .icon {
-    width: 100px;
-    height: 100px;
-  }
+/* Icon Styling */
+.icon {
+  width: 100px;
+  height: 100px;
+}
 
-  .footer {
-    position: absolute;
-    bottom: 10px;
-    font-size: 0.8em;
-    color: #1a0f0f;
-  }
+/* Spinning Icon Animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+.icon.spin {
+  animation: spin 4s linear infinite;
+}
 
-  .icon.spin {
-    animation: spin 4s linear infinite;
-  }
+/* Footer Styling */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8em;
+  color: #1a0f0f; /* Darker text for footer */
+}
+
+/* Profile Information Styling */
+.profile-info {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.profile-info a {
+  color: #1da1f2; /* Twitter blue for links */
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}

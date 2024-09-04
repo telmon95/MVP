@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #00000021;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-container {
+    background: rgba(153, 28, 28, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .city {
+    font-size: 2em;
+    font-weight: 700;
+    color: #555;
+  }
+
+  .temperature {
+    font-size: 4em;
+    font-weight: 300;
+    color: #222;
+  }
+
+  .description {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8em;
+    color: #1a0f0f;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .icon.spin {
+    animation: spin 4s linear infinite;
+  }

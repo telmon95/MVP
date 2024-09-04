@@ -1,0 +1,5 @@
+{
+    "editor.fontSize" : 24,
+    "terminal.intergraded.fontSize" : 24,
+    "liveServer.settings.AdvancedCustomBrowserCmdLine": "chrome"
+}

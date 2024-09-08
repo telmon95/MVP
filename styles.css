@@ -1,90 +1,109 @@
+/* General body styling */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  background-color: #00000021; /* Light transparent black background */
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  font-family: Arial, sans-serif; /* Base font */
+  font-size: 16px; /* Font size */
+  background-color: #00000021; /* Light transparent black */
+  background-image: url('2.jpg'); /* Background image */
+  background-size: cover; /* Cover entire area */
+  background-repeat: no-repeat; /* No repeat */
+  background-position: center center; /* Center image */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 160vh; /* Height of body */
+  margin: 0; /* No margin */
+  padding: 0; /* No padding */
+  color: white; /* White text */
+  text-align: center; /* Center text */
+  flex-direction: column; /* Stack elements vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* No margin */
 }
 
-/* Weather Container Styling */
+/* Weather container styling */
 .weather-container {
-  background: rgba(153, 28, 28, 0.2); /* Semi-transparent maroon background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background: rgba(153, 28, 28, 0.2); /* Semi-transparent maroon */
+  padding: 20px; /* Padding around content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-/* City Name Styling */
+/* City name styling */
 .city {
-  font-size: 2em;
-  font-weight: 700;
-  color: #555; /* Dark grey text */
+  font-size: 2em; /* Large text */
+  font-weight: 700; /* Bold */
+  color: #221212; /* Dark grey */
 }
 
-/* Temperature Styling */
+/* Temperature styling */
 .temperature {
-  font-size: 4em;
-  font-weight: 300;
-  color: #222; /* Darker grey for temperature */
+  font-size: 4em; /* Extra-large text */
+  font-weight: 300; /* Light font weight */
+  color: #832a2a; /* Dark grey */
 }
 
-/* Weather Description Styling */
+/* Weather description styling */
 .description {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #555; /* Matching grey for description */
+  font-size: 1.2em; /* Medium size */
+  font-weight: 400; /* Regular weight */
+  color: #000000; /* Grey color */
 }
 
-/* Icon Styling */
+/* Weather icon styling */
 .icon {
-  width: 100px;
-  height: 100px;
+  width: 100px; /* Icon width */
+  height: 100px; /* Icon height */
 }
 
-/* Spinning Icon Animation */
+/* Spinning icon animation */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
+/* Apply spin animation to icon */
 .icon.spin {
-  animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite; /* Continuous spin */
 }
 
-/* Footer Styling */
+/* Footer styling */
 .footer {
-  position: absolute;
-  bottom: 10px;
-  font-size: 0.8em;
-  color: #1a0f0f; /* Darker text for footer */
+  position: absolute; /* Stick to bottom */
+  bottom: 10px; /* 10px from bottom */
+  font-size: 0.8em; /* Small font */
+  color: #1a0f0f; /* Dark footer text */
 }
 
-/* Profile Information Styling */
+/* Profile info box styling */
 .profile-info {
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 20px; /* Space above */
+  padding: 10px; /* Padding inside */
   background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  width: 100%;
-  max-width: 400px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Max width limit */
 }
 
+/* Profile info paragraph styling */
 .profile-info p {
-  margin: 5px 0;
+  margin: 5px 0; /* Small margins */
 }
 
+/* Profile links styling */
 .profile-info a {
-  color: #1da1f2; /* Twitter blue for links */
-  text-decoration: none;
+  color: #1da1f2; /* Twitter blue */
+  text-decoration: none; /* No underline */
 }
 
+/* Link hover effect */
 .profile-info a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
+}
+
+.highlighted-text {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white; /* White text for contrast */
+  padding: 5px; /* Optional: Adds some space around the text */
+  border-radius: 3px; /* Optional: Slight rounding of the corners */
 }

@@ -107,3 +107,7 @@ body {
   padding: 5px; /* Optional: Adds some space around the text */
   border-radius: 3px; /* Optional: Slight rounding of the corners */
 }
+
+.hidden {
+  display: none;
+}

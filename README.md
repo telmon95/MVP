@@ -1,4 +1,4 @@
----
+
 # Weather App
 
 This Weather App is a simple yet powerful application that allows users to get real-time weather information for any location in the world. Built using the OpenWeatherMap API, it provides current weather conditions, including temperature, humidity, and weather descriptions, with a user-friendly interface.
@@ -92,6 +92,5 @@ Contributions are welcome! If you'd like to contribute, please fork the reposito
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
 
 This draft should give you a solid foundation for your project's `README.md`. You can customize it further based on any additional features or specific details related to your project.

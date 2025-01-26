@@ -1,4 +1,4 @@
-const apiKey = '03229bd185c64164e6a727244547a4c3'; // Your API key
+const apiKey = '03229bd185c64164e6a727244547a4c3';
 const apiURL = 'https://api.openweathermap.org/data/2.5/weather';
 const locationInput = document.getElementById('locationInput');
 const searchButton = document.getElementById('searchButton');
@@ -9,8 +9,28 @@ const humidityElement = document.getElementById('humidity');
 const uvIndexElement = document.getElementById('uv-index');
 const windElement = document.getElementById('wind');
 const precipitationElement = document.getElementById('precipitation');
+const weatherIconElement = document.getElementById('weatherIcon');
 const errorMessageElement = document.getElementById('error-message');
 const defaultLocationButton = document.getElementById('setDefaultButton');
+
+// Icon Mapping for Weather Conditions
+const iconMap = {
+    Clear: 'wi-day-sunny',
+    Clouds: 'wi-cloudy',
+    Rain: 'wi-rain',
+    Drizzle: 'wi-sprinkle',
+    Thunderstorm: 'wi-thunderstorm',
+    Snow: 'wi-snow',
+    Mist: 'wi-fog',
+    Smoke: 'wi-smoke',
+    Haze: 'wi-day-haze',
+    Dust: 'wi-dust',
+    Fog: 'wi-fog',
+    Sand: 'wi-sandstorm',
+    Ash: 'wi-volcano',
+    Squall: 'wi-strong-wind',
+    Tornado: 'wi-tornado',
+};
 
 // Load weather data on app load
 window.addEventListener('load', () => {
@@ -92,12 +112,16 @@ function fetchWeatherByCoords(lat, lon) {
 
 // Display weather data
 function displayWeatherData(data) {
+    const weatherCondition = data.weather[0].main;
     locationElement.textContent = data.name;
     temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
     descriptionElement.textContent = data.weather[0].description;
     humidityElement.textContent = `Humidity: ${data.main.humidity}%`;
     windElement.textContent = `Wind: ${data.wind.speed} m/s`;
-    precipitationElement.textContent = data.rain ? `Precipitation: ${data.rain["1h"]} mm` : 'Precipitation: None';
+    precipitationElement.textContent = data.rain ? `Precipitation: ${data.rain['1h']} mm` : 'Precipitation: None';
+
+    // Set the weather icon dynamically
+    weatherIconElement.className = `wi ${iconMap[weatherCondition] || 'wi-na'}`;
 
     // Note: UV index requires a separate API (not included in the free plan)
     uvIndexElement.textContent = 'UV Index: N/A';
@@ -113,6 +137,7 @@ function showLoading() {
     uvIndexElement.textContent = '';
     windElement.textContent = '';
     precipitationElement.textContent = '';
+    weatherIconElement.className = 'wi wi-na'; // Default empty icon
     errorMessageElement.textContent = ''; // Clear any existing error messages
     errorMessageElement.classList.add('hidden'); // Hide error message
 }
@@ -126,6 +151,7 @@ function showError(message) {
     uvIndexElement.textContent = '';
     windElement.textContent = '';
     precipitationElement.textContent = '';
+    weatherIconElement.className = 'wi wi-na'; // Default empty icon
     errorMessageElement.textContent = message;
     errorMessageElement.classList.remove('hidden'); // Show error message
 }

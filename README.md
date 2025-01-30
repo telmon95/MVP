@@ -46,20 +46,7 @@ This Weather App is a simple yet powerful application that allows users to get r
 1. Enter a city name or location in the search bar.
 2. Click the "Get Weather" button to retrieve weather data for the entered location.
 3. View the displayed weather information, including temperature, humidity, and weather conditions.
-4. To search for a different location, simply enter a new location and click "Get Weather" again.
-
-## Project Structure
-
-```
-weather-app/
-│
-├── index.html           # Main HTML file
-├── css/
-│   └── styles.css       # CSS for styling the app
-├── js/
-│   └── script.js        # JavaScript for fetching and displaying weather data
-└── README.md            # Project documentation
-```
+4. To search for a different location, simply enter a new location and click "Get Weather" again
 
 ## Technologies Used
 

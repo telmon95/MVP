@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.Weather {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  background-color: #f9f9f9;
+}
+
+.Weather h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.Weather img {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
